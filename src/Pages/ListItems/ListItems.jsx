@@ -305,6 +305,7 @@ const ListItems = () => {
                             <form onSubmit={(e) => {
                                 e.preventDefault()
                                 filterProducts()
+                                setSortToggle("")
                                 }}>
                                 <div className="range">
                                     <div className="range-slider">
