@@ -1,0 +1,97 @@
+.newsletter-section{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    
+    .newsletter-section-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        background-color: #EFF2F4;
+    }
+    
+    h4{
+        font-size: var(--2rem);
+    }
+    .newsletter-section-span{
+        width: 80%;
+        text-align: center;
+    }
+    span{
+        color: #606060;
+        font-size: var(--1rem);
+    }
+
+    .newsletter-input-container{
+        margin-top: 25px;
+        display: flex;
+        .newsletter-input{
+            position: relative;
+            width: 100%;
+            display: flex;
+            input{
+                width: 100%;
+                padding: 15px 40px;
+                margin-right: 8px;
+                border:2px solid #DEE2E7;
+                border-radius: 6px;
+                outline: none;
+                &::placeholder{
+                    padding-left: 6px;
+                }
+            }
+
+            img{
+                position: absolute; left: 0; bottom: 30%;
+                margin-left: 8px;
+            }
+        }
+
+        button{
+            padding: 10px 30px;
+            background-color: #0067FF ;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 2000px){
+    .newsletter-section{
+        .newsletter-section-container{
+            width: 1900px;
+        }
+    }
+}
+
+@media (max-width:590px){
+    .newsletter-section{
+        h4{
+            font-size: var(--1rem);
+        }
+        span{
+            font-size: 13px;
+        }
+        
+        .newsletter-input-container{
+            .newsletter-input{
+                input{
+                    padding: 0 30px;
+                }    
+
+                img{
+                    position: absolute; left: 0; bottom: 24%;
+                }
+            }
+            button{
+                padding: 10px 20px;
+            }
+        }
+    }
+}

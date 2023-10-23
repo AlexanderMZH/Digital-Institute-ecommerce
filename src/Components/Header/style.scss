@@ -1,0 +1,176 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    .header {
+        padding: 22px 0;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .brand{
+            cursor: pointer;
+        }
+        .search{
+            width: 45%;
+            display: flex;
+            justify-content: space-between;
+            border: 3px solid #0D6EFD;
+            border-radius: 6px;
+            input{
+                margin: 10px;
+                width: 60%;
+                outline: none;
+                border: none;
+                font-style: normal;
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                &::placeholder{
+                    color: var(--color_gray);
+                    text-transform: capitalize;
+                    font-size: 1em;
+                }
+            }
+            select{
+                height: 100%;
+                border: none;
+                outline: none;
+                border-left: 1px solid #0D6EFD;
+                text-transform: capitalize;
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                cursor: pointer;
+
+                option::first-letter{
+                    text-transform: uppercase;
+                }
+            }
+            button{
+                padding: 0 10px;
+                color: #fff;
+                background-color: #0D6EFD;
+                border: 2px solid #0D6EFD;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.header .icons ul{
+    display: flex;
+    align-items: center;
+    
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        cursor: pointer;
+
+        span{
+            color: var(--color_gray);
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            text-transform: capitalize;
+        }
+    }
+    
+    #my-cart-icon{
+        position: relative;
+
+        #cart-item-quantity{
+            position: absolute; top: -5px; right: -5px;
+            padding: 3px 5px;
+            border: var(--border);
+            border-radius: 50%;
+            span{
+                color: red;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.navigation-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid  #E0E0E0;
+    border-bottom: 1px solid  #E0E0E0;
+    display: none;
+}
+
+.navigation{
+    padding: 18px 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    .navigation-container{
+        display: flex;
+        align-items: center;
+
+        .hamburger-menu{
+            cursor: pointer;
+            margin-right: 10px;
+
+            div{
+                width:25px;
+                height: 3px;
+                background-color: black;
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    .navigation-itmes{
+
+        h6{
+            margin-right: 28px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-block;
+            cursor: pointer;
+
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+
+        #help{
+            border: none;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1em;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    }
+
+    #languages{
+        margin-right: 32px;
+        outline: none;
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+
+    #ship{
+        outline: none;
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1000px){
+    header{
+        display: none;
+    }
+}

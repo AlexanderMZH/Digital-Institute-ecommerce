@@ -1,0 +1,183 @@
+.auth{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    .auth-logo{
+        padding: 40px 0 40px 80px;
+        img{
+            cursor: pointer;
+        }
+    }
+    
+    .auth-container{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40px;
+
+        .signup{
+            width: 35%;
+            border: var(--border);
+            border-radius: 6px;
+            padding: 15px 35px;
+            background-color: #fff;
+
+            .welcome {
+                margin-bottom: 10px;
+                span{
+                    font-size: var(--2rem);
+                    font-weight: 300;
+                }
+            }
+
+            .singup-text{
+                margin-bottom: 20px;
+                span{
+                    font-size: var(--3rem);
+                    font-weight: 500;
+                }
+            } 
+            
+            
+            .auth-input{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                label{
+                    text-transform: capitalize;
+                    margin-bottom: 9px;
+                }
+                input{
+                    padding: 20px 29px 20px;
+                    border: 1px solid #282828;
+                    border-radius: 6px;
+                }
+            
+                .text-text{
+                    display: block;
+                }
+
+                .text-password{
+                    display: none;
+                }
+
+                .pass-password{
+                    display: block;
+                }
+                .pass-text{
+                    display: none;
+                }
+                
+                img{
+                    position: absolute; right: 25px; top: 48px;
+                    width: 24px;
+                    cursor: pointer;
+                }
+            }
+
+            .auth-nav{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .validation{
+                    width: 100%;
+                    padding: 5px 0;
+                    
+                    &::first-letter{
+                        text-transform: uppercase;
+                    }
+                    span{
+                        color: red;
+                    }
+                }
+
+                .auth-button{
+                    width: 100%;
+                    button{
+                        width: 100%;
+                        padding: 15px 0;
+                        color: #fff;
+                        background-color: #282828;
+                        border: none;
+                        border-radius: 6px;
+                        margin: 9px 0 15px 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .have-already{
+
+                span{
+                    color: #7D7D7D;
+                    font-weight: 300;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
+
+.auth-picture{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 100%;
+    }
+}
+
+.auth-loader{
+    position: fixed; left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+
+    h1{
+        font-size: var(--2rem);
+        font-weight: 500;
+    }
+}
+
+@media(max-width:1100px){
+    .auth-picture{
+        display: none;
+    }
+
+    .auth{
+        width: 100%;
+        
+        .auth-container{
+            width: 100%;
+            padding: 0;
+            .signup{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media(max-width: 650px){
+    .auth{        
+        .auth-logo{
+            padding: 10px;
+        }
+        
+        .auth-container{
+            .signup{
+                width: 100%;
+            }
+        }
+    }
+}

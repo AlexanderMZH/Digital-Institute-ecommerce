@@ -1,0 +1,12 @@
+#not-found{
+    color: red;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media(max-width: 350px){
+    #not-found{
+        font-size: 1.5rem;
+    }
+}

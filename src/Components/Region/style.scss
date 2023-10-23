@@ -1,0 +1,131 @@
+.region-section{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .region-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        .region-title h3{
+            font-size: var(--2rem);
+        }
+
+        .region-suppliers{
+            width: 100%;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                margin-top: 30px;
+                li{
+                    width: calc(100%/5);
+                    list-style-type: none;
+                    margin-top: 10px;
+
+                    .region-suppliers-container{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        .region-image img{
+                            width: 100%;
+                        }
+
+                        .region-domain{
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 10px;
+
+                            h6{
+                                font-size: var(--rem);
+                            }
+                            
+                            span{
+                                cursor: pointer;
+                                font-size: 13px;
+                                color: var(--color_gray);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 920px){
+    .region-section{
+        
+        .region-container{
+    
+            .region-suppliers{
+
+                ul{
+
+                    li{
+                        width: calc(100%/4);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 920px){
+    .region-section{
+        
+        .region-container{
+    
+            .region-suppliers{
+
+                ul{
+
+                    li{
+                        width: calc(100%/3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 550px){
+    .region-section{
+        
+        .region-container{
+    
+            .region-suppliers{
+
+                ul{
+
+                    li{
+                        width: calc(100%/2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 370px){
+    .region-section{
+        
+        .region-container{
+    
+            .region-suppliers{
+
+                ul{
+
+                    li{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

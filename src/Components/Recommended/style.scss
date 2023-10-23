@@ -1,0 +1,157 @@
+.recommended-section{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .recommended-section-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        .recommended-section-text h3{
+            font-size: var(--2rem);
+        }
+
+        .recommended-items{
+            width: 100%;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    width: calc(100% / 5);
+                    padding-bottom: 20px;
+                    margin: 0 20px 20px 0;
+                    border: var(--border);
+                    border-radius: 6px;
+                    list-style-type: none;
+                    background-color: #fff;
+
+                    .recommended-item-container{
+                        width: 100%;
+
+                        .recommended-item-image{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 200px;
+                            cursor: pointer;
+                            
+                            img{
+                                width: 35%;
+                                height: 50%;
+                            }
+                        }
+                    }
+                    .recommended-item-description{
+                        margin-left: 15px;
+
+                        span{
+                            font-size: var(--1rem);
+                        }
+
+                        .recommended-item-price{
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                        }
+
+                        .recommended-item-name{
+                            color: var(--color_gray);
+                            span{
+                                display: -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;  
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                    
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 2000px){
+    .recommended-section{
+        .recommended-section-container{
+            width: 1900px;
+        }
+    }
+}
+
+@media(max-width: 1000px){
+    .recommended-section{
+        .recommended-section-container{
+            width: 97%;
+    
+            .recommended-items{
+                ul{
+                    flex-wrap: wrap;
+                    li{
+                        width: calc(100%/4);
+                    }
+                }
+
+                .recommended-items-second{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 750px){
+    .recommended-section{
+        .recommended-section-container{
+            .recommended-items{
+                ul{
+                    justify-content: center;
+                    li{
+                        width: calc(100%/2 - 6%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 500px){
+    .recommended-section{
+        .recommended-section-container{
+            .recommended-items{
+                ul{
+                    li{
+                        width: 80%;
+                        margin: 0;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 360px){
+    .recommended-section{
+        .recommended-section-container{
+            .recommended-items{
+                ul{
+                    li{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

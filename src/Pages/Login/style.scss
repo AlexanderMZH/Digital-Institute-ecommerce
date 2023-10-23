@@ -1,0 +1,46 @@
+.remember-me{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    span{
+        cursor: pointer;
+    }
+
+    input{
+        cursor: pointer;
+    }
+
+    label{
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+.have-already{
+    display: flex;
+    margin-top: 50px;
+        
+    .register {
+        margin-left: 3px;
+        span{
+            color: black !important;
+            font-weight: 600 !important;
+        }
+    }
+}
+
+
+@media(max-width: 350px){
+    .remember-me{
+        flex-direction: column;
+
+        > div{
+            margin-top: 5px;
+        }
+    }
+
+    .have-already{
+        flex-direction: column;
+    }
+}

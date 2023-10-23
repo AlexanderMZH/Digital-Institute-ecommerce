@@ -1,0 +1,134 @@
+.footer-discount{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    .footer-discount-container{
+        width: 90%;
+        height: 120px;
+        background-color: #005ADE;
+        border-radius: 6px;
+        position: relative;
+
+
+        .footer-discount-elements{
+            position: absolute; top: 28px; left: 25px;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+
+            h3{
+                font-size: var(--2rem);
+            }
+
+            span{
+                font-size: var(--1rem);
+            }
+            button{
+                background-color: #FF9017;
+                color: #fff;
+                padding: 15px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 2000px){
+    .footer-discount{
+        .footer-discount-container{
+            width: 1900px;
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .footer-discount-svg{
+        display: none;
+    }
+
+    .footer-discount{
+        .footer-discount-container{
+            width: 95%;
+            height: 100px;
+            .footer-discount-elements{
+                position: unset;
+                width: 100%;
+                padding: 20px;
+                h3{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .footer-discount{
+        .footer-discount-container{
+            height: 140px;
+            .footer-discount-elements{
+                flex-direction: column;
+                align-items: unset;
+                button{
+                    margin-top: 10px;
+                }
+                h3{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px){
+    .footer-discount{
+        .footer-discount-container{
+            height: 140px;
+            .footer-discount-elements{
+                flex-direction: column;
+                align-items: unset;
+                
+                button{
+                    margin-top: 10px;
+                }
+                h3{
+                    font-size: var(--1rem);
+                }
+                span{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .footer-discount{
+        .footer-discount-container{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 335px){
+    .footer-discount{
+        .footer-discount-container{
+            height: 130px;
+            .footer-discount-elements{
+                h3{
+                    font-size: 11px;
+                }
+
+                span{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

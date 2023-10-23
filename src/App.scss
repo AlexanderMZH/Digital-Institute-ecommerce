@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.App{
+  background-color: #F7FAFC;
+}
+
+*:focus{
+  outline: none;
+}
+
+@media(max-width: 1000px){
+  .App{
+    // background-color: #F7FAFC;
+  }
+}
