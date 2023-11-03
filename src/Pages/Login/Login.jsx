@@ -36,29 +36,29 @@ const Login = () =>{
 
     const fetchLogin = async () => {
         
-        // if(
-        //     email.trim() === '' ||
-        //     password === ''        ){
-        //         setAuthValidation("you need to fill all of the fields!")
-        //         return
-        //     }
+        if(
+            email.trim() === '' ||
+            password === ''        ){
+                setAuthValidation("you need to fill all of the fields!")
+                return
+            }
 
-        // if(!password.match(validation.uppercaseLetters)){
-        //     setAuthValidation("password should include at list one uppercase letter!")
-        //     return
-        // }
-        // if(!password.match(validation.specialChars)){
-        //     setAuthValidation("password should include at list one special character!")
-        //     return
-        // }
-        // if(!password.match(validation.number)){
-        //     setAuthValidation("password should include at list one number!")
-        //     return
-        // }
-        // if(password.length < 8){
-        //     setAuthValidation("password should contain at list 8 character!")
-        //     return
-        // }
+        if(!password.match(validation.uppercaseLetters)){
+            setAuthValidation("password should include at list one uppercase letter!")
+            return
+        }
+        if(!password.match(validation.specialChars)){
+            setAuthValidation("password should include at list one special character!")
+            return
+        }
+        if(!password.match(validation.number)){
+            setAuthValidation("password should include at list one number!")
+            return
+        }
+        if(password.length < 8){
+            setAuthValidation("password should contain at list 8 character!")
+            return
+        }
             
         try {
             setLoader(true)
@@ -73,10 +73,16 @@ const Login = () =>{
             })
             const data = await res.json()
 
+            if(data.status){
+                setLoader(false)
+                setAuthValidation("something went wrong")
+                setPassword("")
+                setEmail('')
+                return
+            }
             localStorage.setItem("userToken", JSON.stringify(data.jwt))
             
             navigate('/')
-
             setPassword("")
             setEmail('')
             setLoader(false)
