@@ -34,7 +34,7 @@ const Cart = () => {
     const removeAllFromCart = (removeAllId) => {
         console.log(removeAllId)
         // const userToken = JSON.parse(localStorage.getItem('userToken'))
-        // fetch('https://digitalamazonproject.azurewebsites.net/api/cart/removefromcart',{
+        // fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/removefromcart',{
         //     method: 'DELETE',
         //     headers: {
         //     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Cart = () => {
     const removeFromCart = async (id) => {
         const userToken = JSON.parse(localStorage.getItem('userToken'))
         try {
-            const res = await fetch('https://amazon-digital-prod.azurewebsites.net/api/cart/removefromcart', {
+            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/removefromcart', {
                 method: 'DELETE',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Cart = () => {
         }
         const userToken = JSON.parse(localStorage.getItem('userToken'))
         try {
-            const res = await fetch('https://amazon-digital-prod.azurewebsites.net/api/cart/addincart', {
+            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',

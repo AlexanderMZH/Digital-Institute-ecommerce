@@ -84,7 +84,7 @@ const Authentication = () =>{
         try {
             setLoader(true)
             setAuthValidation("")
-            const res = await fetch('https://amazon-digital-prod.azurewebsites.net/api/user/registerUser', {
+            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/user/registerUser', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

@@ -1,7 +1,7 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getRecommendedData = createAsyncThunk("recommended/getRecommendedData", async() => {
-    return fetch("https://amazon-digital-prod.azurewebsites.net/api/product/mostdemandproducts")
+    return fetch("https://digitalinstitute-amazon.azurewebsites.net/api/product/mostdemandproducts")
     .then(res => res.json())
 })
 

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getCartData = createAsyncThunk("cart/getCartData", async () => {
     const userToken = JSON.parse(localStorage.getItem('userToken'))
-    return fetch('https://amazon-digital-prod.azurewebsites.net/api/cart/getmycartproducts',{
+    return fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/getmycartproducts',{
         headers: { 
         Authorization: `Bearer ${userToken}`
         },
@@ -12,7 +12,7 @@ export const getCartData = createAsyncThunk("cart/getCartData", async () => {
 
 const addToCart = createAsyncThunk("cart/addToCart", async (itemId) => {
     const userToken = JSON.parse(localStorage.getItem('userToken'))
-    return fetch('https://amazon-digital-prod.azurewebsites.net/api/cart/addincart', {
+    return fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
         method: 'POST',
         headers: { 
         'Content-Type': 'application/json',

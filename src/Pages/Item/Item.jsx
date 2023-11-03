@@ -39,7 +39,7 @@ const Item = () => {
     
     const addToCart = async () => {
         try {
-            const res = await fetch('https://amazon-digital-prod.azurewebsites.net/api/cart/addincart', {
+            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',
