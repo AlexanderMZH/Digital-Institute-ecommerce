@@ -35,6 +35,7 @@ const BurgerMenu = ({active, changeActive, changeCartAccessToggle}) => {
                 <div>
                     <img src={login_avatar} alt="user" />
                 </div>
+                {userToken ? (<span>Hello User</span>) : (
                 <div className="burger-auth">
                     <div onClick={() => {
                         navigate('/login')
@@ -53,6 +54,7 @@ const BurgerMenu = ({active, changeActive, changeCartAccessToggle}) => {
                         </span>
                     </div>
                 </div>
+                )}
             </div>
             <div className="burger-icons">
                 <ul>

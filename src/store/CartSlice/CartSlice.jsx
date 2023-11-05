@@ -29,6 +29,7 @@ const CartSlice = createSlice({
     initialState:{
         cartData:[],
         cartPrice:[],
+        cartStatus:false,
         cartDataError: false
     },
     reducers:{

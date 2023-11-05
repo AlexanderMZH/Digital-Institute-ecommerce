@@ -15,7 +15,6 @@ import "./style.scss"
 
 const Header =({changeCartAccessToggle}) => {
     const {cartData} = useSelector(state => state.cart)
-    const {isInCart} = useSelector(state => state.cartCheck)
     
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -26,7 +25,7 @@ const Header =({changeCartAccessToggle}) => {
         if(userToken){
             dispatch(getCartData())
         }
-    },[dispatch,isInCart])
+    },[dispatch,cartData])
     
     if(pathname.includes("login") || pathname.includes("registration")){
         return

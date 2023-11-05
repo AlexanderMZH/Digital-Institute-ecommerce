@@ -53,8 +53,15 @@
             justify-content: space-between;
 
             > div{
+                position: relative;
                 &:first-child{
                     margin-right: 10px;
+                }
+
+                span{
+                    position: absolute; top: 0; left: 27px;
+                    color: red;
+                    font-weight: 600;
                 }
             }
 
