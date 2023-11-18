@@ -19,7 +19,6 @@ import truck from "../../assets/images/truck.png"
 
 import arrow_back from "../../assets/images/arrow_back.png"
 
-
 import "./style.scss"
 
 const Cart = () => {
@@ -51,7 +50,7 @@ const Cart = () => {
     const removeFromCart = async (id) => {
         const userToken = JSON.parse(localStorage.getItem('userToken'))
         try {
-            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/removefromcart', {
+            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/removefromcart', {
                 method: 'DELETE',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -61,7 +60,7 @@ const Cart = () => {
                     productId: id
                 })
             })
-            setRefresh((preState) => preState === false ? true : false)
+            setRefresh((preState) => !preState)
         }
         catch (error){
         }
@@ -73,7 +72,7 @@ const Cart = () => {
         }
         const userToken = JSON.parse(localStorage.getItem('userToken'))
         try {
-            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
+            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -83,7 +82,7 @@ const Cart = () => {
                     productId: itemId
                 })
             })
-            setRefresh((preState) => preState === false ? true : false)
+            setRefresh((preState) => !preState)
             setCartError(false)
         }
         catch (error) {

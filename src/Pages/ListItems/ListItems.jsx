@@ -21,7 +21,7 @@ import sort from "../../assets/images/sort.png"
 
 import "./style.scss"
 
-const ListItems = () => {      
+const ListItems = () => {
     const {categories,categoriesError,categoryId} = useSelector(state => state.categories)
     const {cartData} = useSelector(state => state.cart)
 
@@ -78,7 +78,7 @@ const ListItems = () => {
         }
                 
         try {
-            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
+            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ const ListItems = () => {
                     productId: itemId
                 })
             })
-            setRefresh((preState) => preState === false ? true : false)
+            setRefresh((preState) => !preState)
         }
         catch (error) {
         }

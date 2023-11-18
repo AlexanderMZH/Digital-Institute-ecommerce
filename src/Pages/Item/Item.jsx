@@ -39,7 +39,7 @@ const Item = () => {
     
     const addToCart = async () => {
         try {
-            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
+            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const Item = () => {
                     productId: itemId
                 })
             })
-            setRefresh((preState) => preState === false ? true : false)
+            setRefresh((preState) => !preState)
             setError(false)
         }
         catch (error) {
@@ -62,7 +62,7 @@ const Item = () => {
             setError(false)
             dispatch(getCartCheck(itemId))
         }
-    },[dispatch, itemId, refresh])
+    },[dispatch, itemId, refresh,userToken])
     
     useEffect(() => {
         dispatch(getSuggestions(itemId))

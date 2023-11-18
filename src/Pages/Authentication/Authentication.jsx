@@ -31,7 +31,7 @@ const Authentication = () =>{
             navigate("/")
             return
         }
-    },[])
+    },[navigate, userToken])
     
     const visibilityToggle = (label) => {
         if(label === "Password"){
@@ -84,7 +84,7 @@ const Authentication = () =>{
         try {
             setLoader(true)
             setAuthValidation("")
-            const res = await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/user/registerUser', {
+            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/user/registerUser', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

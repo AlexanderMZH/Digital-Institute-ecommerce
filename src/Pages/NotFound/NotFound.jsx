@@ -10,7 +10,7 @@ const NotFound = () => {
             navigate('/')
           }, 2500);
           return () => clearTimeout(timer);
-    },[])
+    },[navigate])
     
     return <h1 id="not-found">Page not Found...Redirecting to home page</h1>
 }

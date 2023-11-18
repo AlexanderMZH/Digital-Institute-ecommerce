@@ -25,7 +25,7 @@ const Header =({changeCartAccessToggle}) => {
         if(userToken){
             dispatch(getCartData())
         }
-    },[dispatch,cartData])
+    },[dispatch,userToken])
     
     if(pathname.includes("login") || pathname.includes("registration")){
         return
