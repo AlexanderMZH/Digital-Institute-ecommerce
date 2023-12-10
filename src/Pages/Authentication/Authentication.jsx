@@ -84,7 +84,7 @@ const Authentication = () =>{
         try {
             setLoader(true)
             setAuthValidation("")
-            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/user/registerUser', {
+            await fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/user/registerUser', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

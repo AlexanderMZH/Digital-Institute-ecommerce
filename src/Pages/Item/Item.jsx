@@ -39,7 +39,7 @@ const Item = () => {
     
     const addToCart = async () => {
         try {
-            await fetch('https://digitalinstitute-amazon.azurewebsites.net/api/cart/addincart', {
+            await fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',
