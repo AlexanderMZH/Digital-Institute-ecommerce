@@ -1,7 +1,7 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit"
 
 export const getCategories = createAsyncThunk("categories/getCategories", async () => {
-    return fetch("https://ngglobalwebapi20231210182820.azurewebsites.net/api/product/categories")
+    return fetch("https://digitalamazon.azurewebsites.net/api/product/categories")
     .then (res => res.json()) 
     .catch(err => {throw Error(err)})
 })

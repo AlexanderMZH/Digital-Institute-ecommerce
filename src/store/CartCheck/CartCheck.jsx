@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getCartCheck = createAsyncThunk ("cartCheck/getCartCheck", async (itemId) => {
     const userToken = JSON.parse(localStorage.getItem('userToken'))
-    return fetch(`https://ngglobalwebapi20231210182820.azurewebsites.net/api/cart/isproductincart/${itemId}`,{
+    return fetch(`https://digitalamazon.azurewebsites.net/api/cart/isproductincart/${itemId}`,{
             headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${userToken}`

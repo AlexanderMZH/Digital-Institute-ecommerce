@@ -78,7 +78,7 @@ const ListItems = () => {
         }
                 
         try {
-            await fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/cart/addincart', {
+            await fetch('https://digitalamazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const ListItems = () => {
     const brandFilter = (name,event) => {
         const queryParams = Object.fromEntries([...searchPramas])
         if(event.target.checked){
-            fetch(`https://ngglobalwebapi20231210182820.azurewebsites.net/api/product/products?CategoryId=${queryParams.CategoryId}&PriceFrom=${queryParams.PriceFrom}&PriceTo=${queryParams.PriceTo}&BrandName=${name}`)
+            fetch(`https://digitalamazon.azurewebsites.net/api/product/products?CategoryId=${queryParams.CategoryId}&PriceFrom=${queryParams.PriceFrom}&PriceTo=${queryParams.PriceTo}&BrandName=${name}`)
             .then(res => res.json())
             .then(res => setFilteredBrand(res))
 
@@ -125,7 +125,7 @@ const ListItems = () => {
         
     const getFilteredProduct = async () => {
         try{
-            const res = await fetch(`https://ngglobalwebapi20231210182820.azurewebsites.net/api/product/products?CategoryId=${queryParams.CategoryId}&PriceFrom=${queryParams.PriceFrom}&PriceTo=${queryParams.PriceTo}`)
+            const res = await fetch(`https://digitalamazon.azurewebsites.net/api/product/products?CategoryId=${queryParams.CategoryId}&PriceFrom=${queryParams.PriceFrom}&PriceTo=${queryParams.PriceTo}`)
             const data = await res.json()
             setCategoryItems(data)
         }

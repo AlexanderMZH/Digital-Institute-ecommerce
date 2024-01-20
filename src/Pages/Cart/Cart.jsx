@@ -33,7 +33,7 @@ const Cart = () => {
     const removeAllFromCart = (removeAllId) => {
         console.log(removeAllId)
         // const userToken = JSON.parse(localStorage.getItem('userToken'))
-        // fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/cart/removefromcart',{
+        // fetch('https://digitalamazon.azurewebsites.net/api/cart/removefromcart',{
         //     method: 'DELETE',
         //     headers: {
         //     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const Cart = () => {
     const removeFromCart = async (id) => {
         const userToken = JSON.parse(localStorage.getItem('userToken'))
         try {
-            await fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/cart/removefromcart', {
+            await fetch('https://digitalamazon.azurewebsites.net/api/cart/removefromcart', {
                 method: 'DELETE',
                 headers: { 
                 'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Cart = () => {
         }
         const userToken = JSON.parse(localStorage.getItem('userToken'))
         try {
-            await fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/cart/addincart', {
+            await fetch('https://digitalamazon.azurewebsites.net/api/cart/addincart', {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/json',

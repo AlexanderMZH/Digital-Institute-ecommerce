@@ -63,7 +63,7 @@ const Login = () =>{
         try {
             setLoader(true)
             setAuthValidation("")
-            const res = await fetch('https://ngglobalwebapi20231210182820.azurewebsites.net/api/User/LogIn', {
+            const res = await fetch('https://digitalamazon.azurewebsites.net/api/User/LogIn', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
