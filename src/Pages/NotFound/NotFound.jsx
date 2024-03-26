@@ -1,18 +1,23 @@
-import { useEffect } from "react"
-import "./style.scss"
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "./style.scss";
+
 const NotFound = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            navigate('/')
-          }, 2500);
-          return () => clearTimeout(timer);
-    },[navigate])
-    
-    return <h1 id="not-found">Page not Found...Redirecting to home page</h1>
-}
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
-export default NotFound
+  return (
+    <div id="not-found">
+      <h1>Page not Found...Redirecting to home page</h1>
+    </div>
+  );
+};
+
+export default NotFound;
